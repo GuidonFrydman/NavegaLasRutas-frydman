@@ -1,0 +1,17 @@
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto; /* Empuja el carrito a la derecha */
+}
+
+.cart img {
+    width: 24px;
+    height: 24px;
+}
+
+.cart p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
