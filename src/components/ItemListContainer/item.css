@@ -1,0 +1,64 @@
+
+/* Estilo para cada tarjeta de producto */
+.item {
+    background-color: #fff;                /* Fondo blanco */
+    border: 1px solid #ddd;                /* Borde sutil */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 20px;                          /* Espaciado interno */
+    border-radius: 8px;                     /* Bordes redondeados */
+    display: flex;                          /* Flexbox para disposición */
+    flex-direction: column;                 /* Coloca los elementos en columna */
+    justify-content: space-between;         /* Espacio entre los elementos */
+    align-items: center;                    /* Centra los elementos horizontalmente */
+    width: 100%;                            /* Asegura que ocupe todo el ancho disponible */
+    max-width: 300px;                       /* Ancho máximo */
+    margin: 10px;                           /* Margen alrededor de cada tarjeta */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto hover en las tarjetas */
+.item:hover {
+    transform: translateY(-5px);            /* Levanta la tarjeta ligeramente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.item .img-item {
+    width: 100%;                           /* Imagen ocupa todo el ancho de la tarjeta */
+    height: auto;                          /* La altura se ajusta automáticamente */
+    border-radius: 8px;                    /* Bordes redondeados */
+    object-fit: cover;                     /* Asegura que la imagen cubra bien el contenedor */
+}
+
+/* Estilo para los textos dentro de la tarjeta */
+.item .text-item {
+    text-align: center;                    /* Centra el texto */
+    margin-top: 10px;                       /* Espaciado superior */
+    font-size: 16px;                        /* Tamaño de fuente */
+}
+
+/* Estilo para el enlace de ver detalles */
+.item a {
+    display: inline-block; /* Hace que el enlace se comporte como un bloque en línea */
+    padding: 10px 20px; /* Relleno alrededor del texto */
+    background-color: #f0a500; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Hace el texto en negrita */
+    font-size: 16px; /* Tamaño de fuente */
+    text-align: center; /* Alinea el texto al centro */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el hover */
+  }
+  
+  /* Efecto hover para el enlace */
+  .item a:hover {
+    background-color: #d17a00; /* Cambia el color de fondo al pasar el mouse */
+    transform: translateY(-3px); /* Hace que el botón se eleve un poco */
+  }
+  
+  /* Efecto focus para el enlace (cuando se hace clic) */
+  .item a:focus {
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Añade una sombra ligera */
+  }

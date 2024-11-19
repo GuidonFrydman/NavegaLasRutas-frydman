@@ -1,27 +1,71 @@
-.itemlistcontainer{
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-  }
-  .itemlistcontainer .itemlist{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .itemlistcontainer .item{
-    width: 20%;
-    margin: 3% 6%;
-    padding: 2%;
-    border: 2px solid rgb(37, 37, 37);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .item .img-item{
-    width: 100%;
-    border-radius: 1%;
-    background-color: rgb(39, 39, 39);
-  }
-  .item .text-item{
-    padding: 1% 0;
-  }
+/* Contenedor general */
+.itemlistcontainer {
+  display: flex;
+  flex-wrap: wrap;                /* Permite que las tarjetas se muevan a la siguiente línea si es necesario */
+  justify-content: center;        /* Centra las tarjetas en la página */
+  gap: 20px;                      /* Espacio entre tarjetas */
+  padding: 50px;                  /* Espaciado interno */
+}
+/* Contenedor de las tarjetas */
+.itemlist {
+  display: flex;
+  flex-wrap: wrap; /* Las tarjetas se envuelven en varias filas si es necesario */
+  justify-content: space-around; /* Espacio alrededor de las tarjetas */
+  gap: 20px; /* Espacio entre tarjetas */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Estilo para cada tarjeta */
+.item {
+  flex: 1 1 22%; /* Asegura que las tarjetas ocupen el 22% del ancho del contenedor, permitiendo que se ajusten */
+  max-width: 22%; /* Asegura que no se agranden más del 22% */
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.item:hover {
+  transform: translateY(-10px); /* Elevación al pasar el mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilo de la imagen del producto */
+.item .img-item {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo del texto del producto */
+.item .text-item {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333; /* Texto de color gris oscuro */
+}
+
+/* Botón de detalles */
+.item button {
+  background-color: #3498db; /* Fondo azul */
+  color: white; /* Texto blanco */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+.item button:hover {
+  background-color: #2980b9; /* Fondo azul más oscuro al pasar el mouse */
+}

@@ -1,43 +1,59 @@
+/* Estilo general del navbar */
 .navbar {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 10px 20px;
-    background-color: #546eb4;
+    padding: 12px 30px;
+    background-color: #4e5b80;  /* Un tono más suave de azul */
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave para mayor profundidad */
+    border-radius: 8px;  /* Bordes redondeados */
 }
 
+/* Estilo para la marca (logo y nombre) */
 .marca {
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
 .logo {
-    width: 40px; 
-    height: auto; 
-    margin-right: 10px;
-}
-.marca h2 {
-    margin: 0;
-    font-size: 24px;
+    width: 40px;
+    height: auto;
+    margin-right: 12px;
 }
 
+.marca h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;  /* Fuente más prominente */
+}
+
+/* Estilo para la lista de navegación */
 ul {
     list-style: none;
     display: flex;
-    gap: 20px; 
+    gap: 25px;  /* Mayor espacio entre los elementos */
     margin: 0;
     padding: 0;
-    flex-grow: 1; 
+    flex-grow: 1;
     justify-content: center; 
 }
 
+/* Estilo de cada ítem de la lista */
 ul li {
     cursor: pointer;
     font-size: 18px;
     color: white;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+/* Efecto de hover sobre los ítems de la lista */
 ul li:hover {
-    color: #f0a500;
+    color: #f0a500;  /* Color suave similar al que usas para los botones */
+    transform: scale(1.05);  /* Ligero aumento de tamaño al pasar el cursor */
+}
+
+/* Estilo para el enlace activo o el que se ha visitado */
+ul li.active {
+    color: #f0a500;  /* Mantener el color de hover cuando el enlace esté activo */
 }

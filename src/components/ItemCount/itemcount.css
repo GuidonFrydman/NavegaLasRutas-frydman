@@ -1,0 +1,40 @@
+/* Contenedor principal del ItemCount */
+.itemcount-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  /* Espaciado entre los elementos */
+    padding: 10px;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #546eb4; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto de hover */
+button:hover {
+    background-color: #f0a500;
+    transform: scale(1.1);  /* Efecto de "zoom" */
+}
+
+/* Estilo para el botón deshabilitado */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilo para el contador de productos */
+p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;  /* Espaciado a los lados */
+}
